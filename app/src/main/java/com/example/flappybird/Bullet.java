@@ -15,14 +15,14 @@ public class Bullet {
     Bullet(Resources res){
         bullet = BitmapFactory.decodeResource(res,R.drawable.bullet );
 
-        int width = bullet.getWidth();
-        int height = bullet.getHeight();
+        width = bullet.getWidth();
+        height = bullet.getHeight();
 
         width /= 4;
         height /= 4;
 
-        width *= (int)screenRatioX;
-        height *= (int)screenRatioY;
+        width = (int) (width * screenRatioX);
+        height = (int) (height * screenRatioY);
 
         bullet = Bitmap.createScaledBitmap(bullet, width, height, false);
     }
